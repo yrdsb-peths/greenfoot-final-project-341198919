@@ -32,19 +32,19 @@ public class MyWorld extends World
         // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
         if(spawnArea == 1)
         {
-            addObject(bob,450,600);
+            addObject(bob,300,600);
         }
         if(spawnArea == 2)
         {
-            addObject(bob,600,450);
+            addObject(bob,600,300);
         }
         if(spawnArea == 3)
         {
-            addObject(bob,450,0);
+            addObject(bob,300,0);
         }
         if(spawnArea == 0)
         {
-            addObject(bob,0,450);
+            addObject(bob,0,300);
         }
     }
 }
