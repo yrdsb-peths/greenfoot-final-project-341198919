@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public Player joe;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -16,28 +17,32 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1); 
-        Stick joe = new Stick();
-        addObject(joe,450,450);
+        super(600, 600, 1); 
+        joe = new Player();
+        addObject(joe,300,300);
+        
+        spawnEnemy();
     }
     
-    public void Enemy()
+    public void spawnEnemy()
     {
         Enemy bob = new Enemy();
-        int sA = Greenfoot.getRandomNumber(4);
-        if(sA == 1)
+        int spawnArea = Greenfoot.getRandomNumber(4);
+        
+        // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
+        if(spawnArea == 1)
         {
-            addObject(bob,450,900);
+            addObject(bob,450,600);
         }
-        if(sA == 2)
+        if(spawnArea == 2)
         {
-            addObject(bob,900,450);
+            addObject(bob,600,450);
         }
-        if(sA == 3)
+        if(spawnArea == 3)
         {
             addObject(bob,450,0);
         }
-        if(sA == 4)
+        if(spawnArea == 0)
         {
             addObject(bob,0,450);
         }

@@ -14,11 +14,13 @@ public class Enemy extends Actor
      */
     public void act()
     {
+        move(2);
+        
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
-        if(sA == 1)
-        {
-            
-        }
+        Player joe = world.joe;
+        turnTowards(joe.getX(), joe.getY());
+
     }
+    
 }
