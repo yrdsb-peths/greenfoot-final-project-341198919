@@ -41,6 +41,5 @@ public class MyWorld extends World
         {
             addObject(bob,0,450);
         }
-        
     }
 }
