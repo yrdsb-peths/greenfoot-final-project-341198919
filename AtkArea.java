@@ -15,12 +15,18 @@ public class AtkArea extends Actor
     public void act()
     {
         // Add your action code here.
+        MyWorld world = (MyWorld) getWorld();
+        SimpleTimer attackTimer = world.attackTimer;
         
+        if (attackTimer.millisElapsed() > 500 && Greenfoot.isKeyDown("space"))
+        {
+            // Code here for firing a new shot
+            if(isTouching(Enemy.class))
+            {
+                removeTouching(Enemy.class);
+            }
+            attackTimer.mark(); // Reset the timer
+        }
     }
-    
-    private void timer()
-    {
-        SimpleTimer attackTimer = new SimpleTimer();
-    }
-  
+
 }

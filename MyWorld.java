@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public Player joe;
+    public SimpleTimer attackTimer;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -16,10 +17,21 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // The player
         super(600, 600, 1); 
         joe = new Player();
         addObject(joe,300,300);
+        
+        // All the attack areas
+        AtkArea northAtk = new AtkArea();
+        AtkArea eastAtk = new AtkArea();
+        AtkArea southAtk = new AtkArea();
+        AtkArea westAtk = new AtkArea();
+        addObject(northAtk,300,400);
+        addObject(eastAtk,400,300);
+        addObject(southAtk,300,200);
+        addObject(westAtk,200,300);
+        
         
         spawnEnemy();
     }
@@ -46,5 +58,15 @@ public class MyWorld extends World
         {
             addObject(bob,0,300);
         }
+    }
+    
+    private void attackTimer()
+    {
+        attackTimer = new SimpleTimer();
+    }
+    
+    private void defenseTimer()
+    {
+        SimpleTimer defenseTimer = new SimpleTimer();
     }
 }
