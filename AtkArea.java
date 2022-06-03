@@ -18,7 +18,7 @@ public class AtkArea extends Actor
         MyWorld world = (MyWorld) getWorld();
         SimpleTimer attackTimer = world.attackTimer;
         
-        if (attackTimer.millisElapsed() > 500 && Greenfoot.isKeyDown("space"))
+        if(attackTimer.millisElapsed() > 500 && Greenfoot.isKeyDown("space"))
         {
             // Code here for firing a new shot
             if(isTouching(Enemy.class))
