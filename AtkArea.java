@@ -8,16 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AtkArea extends Actor
 {
+    MyWorld world = (MyWorld) getWorld();
+    SimpleTimer attackTimer = world.attackTimer;
     /**
      * Act - do whatever the AtkArea wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        // Add your action code here.
-        MyWorld world = (MyWorld) getWorld();
-        SimpleTimer attackTimer = world.attackTimer;
-        
+        // Add your action code here
+        attackTimer.mark();
         if(attackTimer.millisElapsed() > 500 && Greenfoot.isKeyDown("space"))
         {
             // Code here for firing a new shot
@@ -28,5 +28,4 @@ public class AtkArea extends Actor
             attackTimer.mark(); // Reset the timer
         }
     }
-
 }

@@ -21,7 +21,7 @@ public class MyWorld extends World
         super(600, 600, 1); 
         joe = new Player();
         addObject(joe,300,300);
-        attackTimer.mark();
+        
         
         // All the attack areas
         AtkArea northAtk = new AtkArea();
@@ -36,6 +36,8 @@ public class MyWorld extends World
         
         spawnEnemy();
     }
+    
+    
     
     public void spawnEnemy()
     {
