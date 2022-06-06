@@ -12,7 +12,14 @@ public class Player extends Actor
      * Act - do whatever the Stick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-
+    GreenfootImage blue = new GreenfootImage("images/blue.png");
+    
+    public Player()
+    {
+        setImage(blue);
+        blue.scale(25, 100);
+    }
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("w")){

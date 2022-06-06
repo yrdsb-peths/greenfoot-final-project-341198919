@@ -14,7 +14,7 @@ public class Enemy extends Actor
      */
     public void act()
     {
-        move(2);
+        move(3);
         
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
