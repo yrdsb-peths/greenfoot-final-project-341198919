@@ -19,11 +19,6 @@ public class Title extends World
         super(600, 400, 1);
 
         prepare();
-        
-        if(Greenfoot.isKeyDown("space"))
-        {
-            
-        }
     }
     /**
      * Prepare the world for the start of the program.
@@ -32,9 +27,16 @@ public class Title extends World
     private void prepare()
     {
         Label label = new Label("Space Friends", 100);
-        addObject(label,279,190);
-        label.setLocation(307,192);
-        label.setLocation(311,192);
-        label.setLocation(352,191);
+        addObject(label,300,200);
+    }
+    
+    public void act()
+    {
+        if(Greenfoot.isKeyDown("space"))
+        {
+            MyWorld World = new MyWorld();
+            Greenfoot.setWorld(World);
+            
+        }
     }
 }
