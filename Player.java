@@ -17,7 +17,7 @@ public class Player extends Actor
     public Player()
     {
         setImage(blue);
-        blue.scale(25, 100);
+        blue.scale(50, 50);
     }
     
     public void act()

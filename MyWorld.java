@@ -23,15 +23,15 @@ public class MyWorld extends World
         
         
         // All the attack areas
-        AtkArea northAtk = new AtkArea();
-        AtkArea eastAtk = new AtkArea();
-        AtkArea southAtk = new AtkArea();
-        AtkArea westAtk = new AtkArea();
+        AtkArea northAtk = new AtkArea("south");
+        AtkArea eastAtk = new AtkArea("east");
+        AtkArea southAtk = new AtkArea("north");
+        AtkArea westAtk = new AtkArea("west");
 
-        addObject(northAtk,300,400);
-        addObject(eastAtk,400,300);
-        addObject(southAtk,300,200);
-        addObject(westAtk,200,300);
+        addObject(northAtk,300,350);
+        addObject(eastAtk,350,300);
+        addObject(southAtk,300,250);
+        addObject(westAtk,250,300);
         
         
         spawnEnemy();
