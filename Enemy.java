@@ -24,6 +24,7 @@ public class Enemy extends Actor
         if(isTouching(Player.class))
         {
             world.removeObject(this);
+            world.LifeCounter();
         }
     }
 

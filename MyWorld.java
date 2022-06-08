@@ -10,7 +10,7 @@ public class MyWorld extends World
 {
     public Player joe;
     public Label lifeCount;
-    public int countLife == 3;
+    public int countLife = 3;
     
     /**
      * Constructor for objects of class MyWorld.
