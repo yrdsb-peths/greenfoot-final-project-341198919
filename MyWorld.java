@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public Player joe;
+    public Label lifeCount;
+    public int countLife == 3;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -24,6 +26,8 @@ public class MyWorld extends World
         //Life
         Life heart = new Life();
         addObject(heart,35,570);
+        lifeCount = new Label(3,40);
+        addObject(lifeCount,33,565);
         
         // All the attack areas
         AtkArea northAtk = new AtkArea("south");
@@ -40,7 +44,11 @@ public class MyWorld extends World
         spawnEnemy();
     }
     
-    
+    public void LifeCounter()
+    {
+        countLife--;
+        lifeCount.setValue(countLife);
+    }
     
     public void spawnEnemy()
     {
@@ -65,4 +73,5 @@ public class MyWorld extends World
             addObject(bob,0,300);
         }
     }
+    
 }
