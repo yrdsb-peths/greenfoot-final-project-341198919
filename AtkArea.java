@@ -45,16 +45,55 @@ public class AtkArea extends Actor
      * Act - do whatever the AtkArea wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
+    public void act(String arrow)
     {
         // Add your action code here
-        if(Greenfoot.isKeyDown("space"))
+        if (arrow.equals("north"))
+        {
+            if(Greenfoot.isKeyDown("w"))
         {
             // Code here for firing a new shot
             if(isTouching(Enemy.class))
             {
                 removeTouching(Enemy.class);
             }
+        }
+        }
+        
+        if (arrow.equals("east"))
+        {
+            if(Greenfoot.isKeyDown("d"))
+        {
+            // Code here for firing a new shot
+            if(isTouching(Enemy.class))
+            {
+                removeTouching(Enemy.class);
+            }
+        }
+        }
+        
+        if (arrow.equals("south"))
+        {
+            if(Greenfoot.isKeyDown("s"))
+        {
+            // Code here for firing a new shot
+            if(isTouching(Enemy.class))
+            {
+                removeTouching(Enemy.class);
+            }
+        }
+        }
+        
+        if (arrow.equals("west"))
+        {
+            if(Greenfoot.isKeyDown("a"))
+        {
+            // Code here for firing a new shot
+            if(isTouching(Enemy.class))
+            {
+                removeTouching(Enemy.class);
+            }
+        }
         }
     }
     

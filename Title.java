@@ -28,6 +28,8 @@ public class Title extends World
     {
         Label label = new Label("Space Friends", 100);
         addObject(label,300,200);
+        Label begin = new Label("[Press space to begin]", 50);
+        addObject(begin,300,300);
     }
     
     public void act()

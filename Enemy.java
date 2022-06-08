@@ -15,12 +15,16 @@ public class Enemy extends Actor
     public void act()
     {
         move(3);
-        
+
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
         Player joe = world.joe;
         turnTowards(joe.getX(), joe.getY());
 
+        if(isTouching(Player.class))
+        {
+            world.removeObject(this);
+        }
     }
-    
+
 }

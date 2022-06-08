@@ -21,6 +21,9 @@ public class MyWorld extends World
         joe = new Player();
         addObject(joe,300,300);
         
+        //Life
+        Life heart = new Life();
+        addObject(heart,35,570);
         
         // All the attack areas
         AtkArea northAtk = new AtkArea("south");
