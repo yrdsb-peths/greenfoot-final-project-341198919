@@ -14,7 +14,7 @@ public class AtkArea extends Actor
     GreenfootImage arrowWest = new GreenfootImage("images/arrowWest.png");
     private int sizeX = 50;
     private int sizeY = 50;
-    
+
     public AtkArea(String arrow)
     {
         if (arrow.equals("north"))
@@ -22,79 +22,88 @@ public class AtkArea extends Actor
             setImage(arrowNorth);
             arrowNorth.scale(sizeX, sizeY);
         }
-        
+
         if (arrow.equals("east"))
         {
             setImage(arrowEast);
             arrowEast.scale(sizeX, sizeY);
         }
-        
+
         if (arrow.equals("south"))
         {
             setImage(arrowSouth);
             arrowSouth.scale(sizeX, sizeY);
         }
-        
+
         if (arrow.equals("west"))
         {
             setImage(arrowWest);
             arrowWest.scale(sizeX, sizeY);
         }
     }
+
     /**
      * Act - do whatever the AtkArea wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act(String arrow)
+    public void act()
     {
         // Add your action code here
-        if (arrow.equals("northAtk"))
+        // if (arrow.equals("northAtk"))
+        // {
+        // if(Greenfoot.isKeyDown("w"))
+        // {
+        // // Code here for firing a new shot
+        // if(isTouching(Enemy.class))
+        // {
+        // removeTouching(Enemy.class);
+        // }
+        // }
+        // }
+
+        // if (arrow.equals("eastAtk"))
+        // {
+        // if(Greenfoot.isKeyDown("d"))
+        // {
+        // // Code here for firing a new shot
+        // if(isTouching(Enemy.class))
+        // {
+        // removeTouching(Enemy.class);
+        // }
+        // }
+        // }
+
+        // if (arrow.equals("southAtk"))
+        // {
+        // if(Greenfoot.isKeyDown("s"))
+        // {
+        // // Code here for firing a new shot
+        // if(isTouching(Enemy.class))
+        // {
+        // removeTouching(Enemy.class);
+        // }
+        // }
+        // }
+
+        // if (arrow.equals("westAtk"))
+        // {
+        // if(Greenfoot.isKeyDown("a"))
+        // {
+        // // Code here for firing a new shot
+        // if(isTouching(Enemy.class))
+        // {
+        // removeTouching(Enemy.class);
+        // }
+        // }
+        // }
+    }
+
+    public void attack()
+    {
+        if(isTouching(Enemy.class))
         {
-            if(Greenfoot.isKeyDown("w"))
-        {
-            // Code here for firing a new shot
-            if(isTouching(Enemy.class))
-            {
-                removeTouching(Enemy.class);
-            }
-        }
-        }
-        
-        if (arrow.equals("eastAtk"))
-        {
-            if(Greenfoot.isKeyDown("d"))
-        {
-            // Code here for firing a new shot
-            if(isTouching(Enemy.class))
-            {
-                removeTouching(Enemy.class);
-            }
-        }
-        }
-        
-        if (arrow.equals("southAtk"))
-        {
-            if(Greenfoot.isKeyDown("s"))
-        {
-            // Code here for firing a new shot
-            if(isTouching(Enemy.class))
-            {
-                removeTouching(Enemy.class);
-            }
-        }
-        }
-        
-        if (arrow.equals("westAtk"))
-        {
-            if(Greenfoot.isKeyDown("a"))
-        {
-            // Code here for firing a new shot
-            if(isTouching(Enemy.class))
-            {
-                removeTouching(Enemy.class);
-            }
-        }
+            removeTouching(Enemy.class);
         }
     }
-    
+
 }
