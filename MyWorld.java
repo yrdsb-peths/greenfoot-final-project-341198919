@@ -35,10 +35,10 @@ public class MyWorld extends World
         AtkArea southAtk = new AtkArea("north");
         AtkArea westAtk = new AtkArea("west");
 
-        addObject(northAtk,300,350);
-        addObject(eastAtk,350,300);
-        addObject(southAtk,300,250);
-        addObject(westAtk,250,300);
+        addObject(northAtk,300,380);
+        addObject(eastAtk,380,300);
+        addObject(southAtk,300,220);
+        addObject(westAtk,220,300);
         
         
         spawnEnemy();
@@ -53,6 +53,7 @@ public class MyWorld extends World
     public void spawnEnemy()
     {
         Enemy bob = new Enemy();
+        
         int spawnArea = Greenfoot.getRandomNumber(4);
         
         // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);

@@ -48,7 +48,7 @@ public class AtkArea extends Actor
     public void act(String arrow)
     {
         // Add your action code here
-        if (arrow.equals("north"))
+        if (arrow.equals("northAtk"))
         {
             if(Greenfoot.isKeyDown("w"))
         {
@@ -60,7 +60,7 @@ public class AtkArea extends Actor
         }
         }
         
-        if (arrow.equals("east"))
+        if (arrow.equals("eastAtk"))
         {
             if(Greenfoot.isKeyDown("d"))
         {
@@ -72,7 +72,7 @@ public class AtkArea extends Actor
         }
         }
         
-        if (arrow.equals("south"))
+        if (arrow.equals("southAtk"))
         {
             if(Greenfoot.isKeyDown("s"))
         {
@@ -84,7 +84,7 @@ public class AtkArea extends Actor
         }
         }
         
-        if (arrow.equals("west"))
+        if (arrow.equals("westAtk"))
         {
             if(Greenfoot.isKeyDown("a"))
         {
