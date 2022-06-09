@@ -31,7 +31,7 @@ public class Enemy extends Actor
         {
             world.removeObject(this);
             
-            //world.LifeCounter();
+            world.LifeCounter();
         }
     }
 

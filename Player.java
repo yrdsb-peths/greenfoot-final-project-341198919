@@ -24,13 +24,13 @@ public class Player extends Actor
     {
         MyWorld world = (MyWorld) getWorld();
 
-        if(Greenfoot.isKeyDown("w")){
+        if(Greenfoot.isKeyDown("s")){
             world.northAtk.attack();
         }
         if(Greenfoot.isKeyDown("a")){
             world.westAtk.attack();
         }
-        if(Greenfoot.isKeyDown("s")){
+        if(Greenfoot.isKeyDown("w")){
             world.southAtk.attack();
         }
         if(Greenfoot.isKeyDown("d")){

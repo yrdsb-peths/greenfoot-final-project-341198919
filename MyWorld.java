@@ -40,11 +40,13 @@ public class MyWorld extends World
         southAtk = new AtkArea("south");
         westAtk = new AtkArea("west");
 
-        addObject(northAtk,300,380);
-        addObject(eastAtk,380,300);
-        addObject(southAtk,300,220);
-        addObject(westAtk,220,300);
+        addObject(northAtk,300,370);
+        addObject(eastAtk,370,300);
+        addObject(southAtk,300,230);
+        addObject(westAtk,230,300);
 
+        spawnEnemy();
+        spawnEnemy();
         spawnEnemy();
     }
 
@@ -52,6 +54,11 @@ public class MyWorld extends World
     {
         countLife--;
         lifeCount.setValue(countLife);
+        if(countLife == 0)
+        {
+            GameOver World = new GameOver();
+            Greenfoot.setWorld(World);
+        }
     }
 
     public void spawnEnemy()
