@@ -11,6 +11,8 @@ public class MyWorld extends World
     public Player joe;
     public Label lifeCount;
     public int countLife = 3;
+    
+    private SimpleTimer spawnTimer = new SimpleTimer();
 
     public AtkArea northAtk;
     public AtkArea eastAtk;
@@ -45,6 +47,8 @@ public class MyWorld extends World
         addObject(southAtk,300,230);
         addObject(westAtk,230,300);
 
+        //Spawing Enemies
+        spawnTimer.mark();
         spawnEnemy();
         spawnEnemy();
         spawnEnemy();
@@ -86,4 +90,13 @@ public class MyWorld extends World
         }
     }
 
+    //Act method, spawns the enemy in every few seconds
+    public void act()
+    {
+        if (spawnTimer.millisElapsed() > 3000)
+        {
+            spawnEnemy();
+            spawnTimer.mark();
+        }
+    }
 }
