@@ -3,6 +3,7 @@ class.AtkArea.image=arrow.png
 class.Enemy.image=red.png
 class.GameOver.image=space.jpg
 class.Life.image=heart.png
+class.MyWorld.image=bridge.png
 class.Player.image=bluestick-removebg-preview.png
 class.Title.image=space.jpg
 dependency1.from=GameOver
