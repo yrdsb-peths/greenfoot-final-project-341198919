@@ -14,7 +14,8 @@ public class MyWorld extends World
     public int countLife = 3;
     public int killStreak = 0;
     
-    private SimpleTimer spawnTimer = new SimpleTimer();
+    private SimpleTimer enemyTimer = new SimpleTimer();
+    private SimpleTimer sanicTimer = new SimpleTimer();
 
     public AtkArea northAtk;
     public AtkArea eastAtk;
@@ -56,10 +57,8 @@ public class MyWorld extends World
         addObject(westAtk,230,300);
 
         //Spawing Enemies
-        spawnTimer.mark();
-        spawnEnemy();
-        spawnEnemy();
-        spawnEnemy();
+        enemyTimer.mark();
+        sanicTimer.mark();
     }
 
     public void LifeCounter()
@@ -78,6 +77,8 @@ public class MyWorld extends World
         killStreak++;
         killCount.setValue(killStreak);
     }
+    
+    //Enemies that I will eventually create
     
     public void spawnEnemy()
     {
@@ -103,14 +104,43 @@ public class MyWorld extends World
             addObject(bob,0,300);
         }
     }
+    
+    public void spawnSanic()
+    {
+        Sanic zoom = new Sanic();
 
+        int spawnArea = Greenfoot.getRandomNumber(4);
+
+        // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
+        if(spawnArea == 1)
+        {
+            addObject(zoom,300,600);
+        }
+        if(spawnArea == 2)
+        {
+            addObject(zoom,600,300);
+        }
+        if(spawnArea == 3)
+        {
+            addObject(zoom,300,0);
+        }
+        if(spawnArea == 0)
+        {
+            addObject(zoom,0,300);
+        }
+    }
     //Act method, spawns the enemy in every few seconds
     public void act()
     {
-        if (spawnTimer.millisElapsed() > 3000)
+        if (enemyTimer.millisElapsed() > 3000)
         {
             spawnEnemy();
-            spawnTimer.mark();
+            enemyTimer.mark();
+        }
+        if (sanicTimer.millisElapsed() > 7000)
+        {
+            spawnSanic();
+            sanicTimer.mark();
         }
     }
 }

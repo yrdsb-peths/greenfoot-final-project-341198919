@@ -62,6 +62,15 @@ public class AtkArea extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.streak();
         }
+        if(isTouching(Sanic.class))
+        {
+            //Kill enemy
+            removeTouching(Sanic.class);
+            
+            //Score
+            MyWorld world = (MyWorld) getWorld();
+            world.streak();
+        }
     }
 
 }
