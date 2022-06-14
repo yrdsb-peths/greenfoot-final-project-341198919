@@ -29,7 +29,7 @@ public class Instruction extends World
         addObject(title,300,30);
         //How to attack
         Label keybinds = new Label("WASD to attack", 50);
-        addObject(keybinds,150,100);
+        addObject(keybinds,150,150);
         Images atkArrow = new Images("arrow");
         addObject(atkArrow,450,100);
         Images player = new Images("player");
@@ -38,13 +38,21 @@ public class Instruction extends World
         addObject(enemy,475,100);
         Label d = new Label("Press D",50);
         addObject(d,450,150);
-        
+        //Health system
         joe = new Player();
         addObject(joe,50,250);
-        spawnDummy();
+        Images life = new Images("life");
+        addObject(life,230,255);
+        Label equals = new Label("=  -1",50);
+        addObject(equals,200,250);
+        Images lifeTwo = new Images("life");
+        addObject(lifeTwo,304,255);
+        Label zero = new Label("0  = Game Over",50);
+        addObject(zero,435,250);
+        }
         
         
-    }
+    
     public void spawnDummy()
     {
         Dummy bob = new Dummy();
@@ -63,7 +71,7 @@ public class Instruction extends World
         {
             removeObject(enemy);
         }
-        if (spawnTimer.millisElapsed() > 2000)
+        if (spawnTimer.millisElapsed() > 1000)
         {
             spawnDummy();
             spawnTimer.mark();

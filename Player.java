@@ -13,7 +13,8 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage blue = new GreenfootImage("images/blue.png");
-
+    MyWorld world = (MyWorld) getWorld();
+    Instruction instruct = (Instruction) getWorld();
     public Player()
     {
         setImage(blue);
@@ -22,7 +23,6 @@ public class Player extends Actor
 
     public void act()
     {
-        MyWorld world = (MyWorld) getWorld();
 
         if(Greenfoot.isKeyDown("s")){
             world.northAtk.attack();

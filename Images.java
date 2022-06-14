@@ -11,6 +11,7 @@ public class Images extends Actor
     GreenfootImage arrow = new GreenfootImage("images/arrowEast.png");
     GreenfootImage enemy = new GreenfootImage("images/red.png");
     GreenfootImage player = new GreenfootImage("images/blue.png");
+    GreenfootImage life = new GreenfootImage("images/heart.png");
     
     public Images(String name)
     {
@@ -28,6 +29,11 @@ public class Images extends Actor
         {
             setImage(player);
             player.scale(50,50);
+        }
+        if(name.equals("life"))
+        {
+            setImage(life);
+            life.scale(70,70);
         }
     }
     /**
