@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Instruction extends World
 {
     public Images enemy;
-    public Player joe;
+    public Pummy joe;
     private SimpleTimer spawnTimer = new SimpleTimer();
     /**
      * Constructor for objects of class Instruction.
@@ -39,7 +39,7 @@ public class Instruction extends World
         Label d = new Label("Press D",50);
         addObject(d,450,150);
         //Health system
-        joe = new Player();
+        joe = new Pummy();
         addObject(joe,50,250);
         Images life = new Images("life");
         addObject(life,230,255);
