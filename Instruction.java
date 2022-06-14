@@ -27,7 +27,7 @@ public class Instruction extends World
     {
         Label title = new Label("Instructions", 100);
         addObject(title,300,30);
-        
+        //How to attack
         Label keybinds = new Label("WASD to attack", 50);
         addObject(keybinds,150,100);
         Images atkArrow = new Images("arrow");

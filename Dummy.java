@@ -23,13 +23,13 @@ public class Dummy extends Actor
         move(3);
 
         // Add your action code here.
-        Instruction world = (Instruction) getWorld();
-        Player joe = world.joe;
+        Instruction guide = (Instruction) getWorld();
+        Player joe = guide.joe;
         turnTowards(joe.getX(), joe.getY());
 
         if(isTouching(Player.class))
         {
-            world.removeObject(this);
+            guide.removeObject(this);
         }
     }
 
