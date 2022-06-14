@@ -30,25 +30,38 @@ public class Instruction extends World
         //How to attack
         Label keybinds = new Label("WASD to attack", 50);
         addObject(keybinds,150,150);
-        Images atkArrow = new Images("arrow");
-        addObject(atkArrow,450,100);
+        
+        Images arrow = new Images("arrow");
+        addObject(arrow,450,100);
+        
         Images player = new Images("player");
         addObject(player,400,100);
+        
         enemy = new Images("enemy");
         addObject(enemy,475,100);
+        
         Label d = new Label("Press D",50);
         addObject(d,450,150);
+        
         //Health system
         joe = new Pummy();
         addObject(joe,50,250);
+        
         Images life = new Images("life");
         addObject(life,230,255);
+        
         Label equals = new Label("=  -1",50);
         addObject(equals,200,250);
+        
         Images lifeTwo = new Images("life");
         addObject(lifeTwo,304,255);
+        
         Label zero = new Label("0  = Game Over",50);
         addObject(zero,435,250);
+        
+        //Begin game
+        Label startGame = new Label("Press space to begin",50);
+        addObject(startGame,300,350);
         }
         
         

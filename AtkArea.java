@@ -48,61 +48,19 @@ public class AtkArea extends Actor
      */
     public void act()
     {
-        // Add your action code here
-        // if (arrow.equals("northAtk"))
-        // {
-        // if(Greenfoot.isKeyDown("w"))
-        // {
-        // // Code here for firing a new shot
-        // if(isTouching(Enemy.class))
-        // {
-        // removeTouching(Enemy.class);
-        // }
-        // }
-        // }
-
-        // if (arrow.equals("eastAtk"))
-        // {
-        // if(Greenfoot.isKeyDown("d"))
-        // {
-        // // Code here for firing a new shot
-        // if(isTouching(Enemy.class))
-        // {
-        // removeTouching(Enemy.class);
-        // }
-        // }
-        // }
-
-        // if (arrow.equals("southAtk"))
-        // {
-        // if(Greenfoot.isKeyDown("s"))
-        // {
-        // // Code here for firing a new shot
-        // if(isTouching(Enemy.class))
-        // {
-        // removeTouching(Enemy.class);
-        // }
-        // }
-        // }
-
-        // if (arrow.equals("westAtk"))
-        // {
-        // if(Greenfoot.isKeyDown("a"))
-        // {
-        // // Code here for firing a new shot
-        // if(isTouching(Enemy.class))
-        // {
-        // removeTouching(Enemy.class);
-        // }
-        // }
-        // }
+        
     }
 
     public void attack()
     {
         if(isTouching(Enemy.class))
         {
+            //Kill enemy
             removeTouching(Enemy.class);
+            
+            //Score
+            MyWorld world = (MyWorld) getWorld();
+            world.streak();
         }
     }
 

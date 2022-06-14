@@ -10,7 +10,9 @@ public class MyWorld extends World
 {
     public Player joe;
     public Label lifeCount;
+    public Label killCount;
     public int countLife = 3;
+    public int killStreak = 0;
     
     private SimpleTimer spawnTimer = new SimpleTimer();
 
@@ -31,10 +33,16 @@ public class MyWorld extends World
         addObject(joe,300,300);
 
         //Life
-        Life heart = new Life();
+        Images heart = new Images("life");
         addObject(heart,35,570);
         lifeCount = new Label(3,40);
         addObject(lifeCount,33,565);
+        
+        //Kill streak
+        Images skull = new Images("skull");
+        addObject(skull,100,565);
+        killCount = new Label(0,40);
+        addObject(killCount,100,565);
 
         // All the attack areas
         northAtk = new AtkArea("north");
@@ -65,6 +73,12 @@ public class MyWorld extends World
         }
     }
 
+    public void streak()
+    {
+        killStreak++;
+        killCount.setValue(killStreak);
+    }
+    
     public void spawnEnemy()
     {
         Enemy bob = new Enemy();
