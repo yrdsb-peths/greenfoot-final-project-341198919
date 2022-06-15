@@ -76,7 +76,7 @@ public class Instruction extends World
     {
         if(Greenfoot.isKeyDown("space"))
         {
-            MyWorld World = new MyWorld();
+            Guide World = new Guide();
             Greenfoot.setWorld(World);
             
         }

@@ -58,7 +58,6 @@ public class MyWorld extends World
         addObject(westAtk,230,300);
 
         //Spawing Enemies
-        spawnGhost();
         enemyTimer.mark();
         sanicTimer.mark();
         ghostTimer.mark();
