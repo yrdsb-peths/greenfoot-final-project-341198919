@@ -13,6 +13,7 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage blue = new GreenfootImage("images/blue.png");
+    GreenfootSound swing = new GreenfootSound("sounds/swing.mp3");
     
     public Player()
     {
@@ -25,15 +26,19 @@ public class Player extends Actor
         MyWorld world = (MyWorld) getWorld();
         if(Greenfoot.isKeyDown("s")){
             world.northAtk.attack();
+            swing.play();
         }
         if(Greenfoot.isKeyDown("a")){
             world.westAtk.attack();
+            swing.play();
         }
         if(Greenfoot.isKeyDown("w")){
             world.southAtk.attack();
+            swing.play();
         }
         if(Greenfoot.isKeyDown("d")){
             world.eastAtk.attack();
+            swing.play();
         }
     }
 }
