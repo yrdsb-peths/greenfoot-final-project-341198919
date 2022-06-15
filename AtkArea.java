@@ -12,6 +12,7 @@ public class AtkArea extends Actor
     GreenfootImage arrowEast = new GreenfootImage("images/arrowEast.png");
     GreenfootImage arrowSouth = new GreenfootImage("images/arrowSouth.png");
     GreenfootImage arrowWest = new GreenfootImage("images/arrowWest.png");
+    GreenfootSound ow = new GreenfootSound("sounds/ow.mp3");
     private int sizeX = 50;
     private int sizeY = 50;
 
@@ -91,9 +92,9 @@ public class AtkArea extends Actor
         }
         if(isTouching(Fairy.class))
         {
-            //Kill enemy
+            //Kill friend
             removeTouching(Fairy.class);
-            
+            ow.play();
             //Score
             MyWorld world = (MyWorld) getWorld();
             world.LifeCounter();
