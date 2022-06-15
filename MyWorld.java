@@ -75,7 +75,7 @@ public class MyWorld extends World
         lifeCount.setValue(countLife);
         if(countLife == 0)
         {
-            GameOver World = new GameOver();
+            GameOver World = new GameOver(killStreak);
             Greenfoot.setWorld(World);
         }
     }

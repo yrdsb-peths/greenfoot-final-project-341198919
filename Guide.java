@@ -29,35 +29,35 @@ public class Guide extends World
         Images enemy = new Images("enemy");
         addObject(enemy,50,50);
         
-        Label enemyDesc = new Label("A slime, nothing special", 30);
-        addObject(enemyDesc,250,50);
+        Label enemyDesc = new Label("Slime: A slime, nothing special", 30);
+        addObject(enemyDesc,300,50);
         
         //Introducing Sanic
         Images sanic = new Images("sanic");
         addObject(sanic,50,100);
         
-        Label sanicDesc = new Label("Twice as fast as a slime", 30);
-        addObject(sanicDesc,250,100);
+        Label sanicDesc = new Label("Sanic: Twice as fast as a slime", 30);
+        addObject(sanicDesc,300,100);
         
         //Introducing Boo
         Images boo = new Images("boo");
         addObject(boo,50,150);
         
-        Label booDesc = new Label("Will jumpscare you, react quickly",30);
+        Label booDesc = new Label("Boo: Will jumpscare you, react quickly",30);
         addObject(booDesc,300,150);
         
         //Introducing fairies
         Images fairy = new Images("fairy");
         addObject(fairy,50,200);
         
-        Label fairyDesc = new Label("A friend",30);
+        Label fairyDesc = new Label("Fairy: A friend",30);
         addObject(fairyDesc,170,200);
         
         //Introducing bullets
         Images shot = new Images("shot");
         addObject(shot,50,250);
         
-        Label shotDesc = new Label("Faster than Sanic, smaller than a fairy", 30);
+        Label shotDesc = new Label("Blast: Faster than Sanic, smaller than a fairy", 30);
         addObject(shotDesc,320,250);
     }
         

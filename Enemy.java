@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     GreenfootImage enemy = new GreenfootImage("images/red.png");
+    GreenfootSound slime = new GreenfootSound("sounds/slime.mp3");
+    GreenfootSound ow = new GreenfootSound("sounds/ow.mp3");
     public Enemy()
     {
         setImage(enemy);
@@ -21,7 +23,7 @@ public class Enemy extends Actor
     public void act()
     {
         move(3);
-
+        slime.play();
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
         Player joe = world.joe;
@@ -30,7 +32,7 @@ public class Enemy extends Actor
         if(isTouching(Player.class))
         {
             world.removeObject(this);
-            
+            ow.play();
             world.LifeCounter();
         }
     }

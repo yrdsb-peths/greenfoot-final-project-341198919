@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Boo extends Actor
 {
     GreenfootImage enemy = new GreenfootImage("images/ghost.png");
+    GreenfootSound booS = new GreenfootSound("sounds/boo.mp3");
+    GreenfootSound ow = new GreenfootSound("sounds/ow.mp3");
     public Boo()
     {
         setImage(enemy);
@@ -21,6 +23,7 @@ public class Boo extends Actor
     public void act()
     {
         move(2);
+        booS.play();
 
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
@@ -30,6 +33,7 @@ public class Boo extends Actor
         if(isTouching(Player.class))
         {
             world.removeObject(this);
+            ow.play();
             
             world.LifeCounter();
         }

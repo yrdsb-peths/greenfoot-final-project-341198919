@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Fairy extends Actor
 {
     GreenfootImage enemy = new GreenfootImage("images/fairy.png");
+    GreenfootSound fairyS = new GreenfootSound("sounds/fairy.mp3");
+    GreenfootSound heal = new GreenfootSound("sounds/heal.mp3");
     public Fairy()
     {
         setImage(enemy);
@@ -21,7 +23,7 @@ public class Fairy extends Actor
     public void act()
     {
         move(3);
-
+        fairyS.play();
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
         Player joe = world.joe;
@@ -30,7 +32,7 @@ public class Fairy extends Actor
         if(isTouching(Player.class))
         {
             world.removeObject(this);
-            
+            heal.play();
             world.LifePlus();
         }
     }
