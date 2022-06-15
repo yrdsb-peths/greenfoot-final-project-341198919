@@ -17,12 +17,15 @@ public class MyWorld extends World
     private SimpleTimer enemyTimer = new SimpleTimer();
     private SimpleTimer sanicTimer = new SimpleTimer();
     private SimpleTimer ghostTimer = new SimpleTimer();
+    private SimpleTimer shotTimer = new SimpleTimer();
+    private SimpleTimer fairyTimer = new SimpleTimer();
+    
 
     public AtkArea northAtk;
     public AtkArea eastAtk;
     public AtkArea southAtk;
     public AtkArea westAtk;
-
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -58,9 +61,12 @@ public class MyWorld extends World
         addObject(westAtk,230,300);
 
         //Spawing Enemies
+        
         enemyTimer.mark();
         sanicTimer.mark();
         ghostTimer.mark();
+        shotTimer.mark();
+        fairyTimer.mark();
     }
 
     public void LifeCounter()
@@ -72,6 +78,12 @@ public class MyWorld extends World
             GameOver World = new GameOver();
             Greenfoot.setWorld(World);
         }
+    }
+    
+    public void LifePlus()
+    {
+        countLife++;
+        lifeCount.setValue(countLife);
     }
 
     public void streak()
@@ -156,6 +168,56 @@ public class MyWorld extends World
             addObject(ghost,420,300);
         }
     }
+    
+    public void spawnShot()
+    {
+        Shot blast = new Shot();
+
+        int spawnArea = Greenfoot.getRandomNumber(4);
+
+        // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
+        if(spawnArea == 1)
+        {
+            addObject(blast,300,600);
+        }
+        if(spawnArea == 2)
+        {
+            addObject(blast,600,300);
+        }
+        if(spawnArea == 3)
+        {
+            addObject(blast,300,0);
+        }
+        if(spawnArea == 0)
+        {
+            addObject(blast,0,300);
+        }
+    }
+    
+    public void spawnFairy()
+    {
+        Fairy fairy = new Fairy();
+
+        int spawnArea = Greenfoot.getRandomNumber(4);
+
+        // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
+        if(spawnArea == 1)
+        {
+            addObject(fairy,300,600);
+        }
+        if(spawnArea == 2)
+        {
+            addObject(fairy,600,300);
+        }
+        if(spawnArea == 3)
+        {
+            addObject(fairy,300,0);
+        }
+        if(spawnArea == 0)
+        {
+            addObject(fairy,0,300);
+        }
+    }
     //Act method, spawns the enemy in every few seconds
     public void act()
     {
@@ -173,6 +235,16 @@ public class MyWorld extends World
         {
             spawnGhost();
             ghostTimer.mark();
+        }
+        if (shotTimer.millisElapsed() > 5000)
+        {
+            spawnShot();
+            shotTimer.mark();
+        }
+        if (fairyTimer.millisElapsed() > 30000)
+        {
+            spawnFairy();
+            fairyTimer.mark();
         }
     }
 }

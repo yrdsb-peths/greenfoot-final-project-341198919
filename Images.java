@@ -13,6 +13,10 @@ public class Images extends Actor
     GreenfootImage player = new GreenfootImage("images/blue.png");
     GreenfootImage life = new GreenfootImage("images/heart.png");
     GreenfootImage skull = new GreenfootImage("images/skull.png");
+    GreenfootImage sanic = new GreenfootImage("images/zoom.png");
+    GreenfootImage boo = new GreenfootImage("images/ghost.png");
+    GreenfootImage shot = new GreenfootImage("images/shot.png");
+    GreenfootImage fairy = new GreenfootImage("images/fairy.png");
     
     public Images(String name)
     {
@@ -40,6 +44,26 @@ public class Images extends Actor
         {
             setImage(skull);
             skull.scale(70,70);
+        }
+        if(name.equals("sanic"))
+        {
+            setImage(sanic);
+            sanic.scale(50,50);
+        }
+        if(name.equals("boo"))
+        {
+            setImage(boo);
+            boo.scale(50,50);
+        }
+        if(name.equals("shot"))
+        {
+            setImage(shot);
+            shot.scale(50,10);
+        }
+        if(name.equals("fairy"))
+        {
+            setImage(fairy);
+            fairy.scale(50,50);
         }
     }
     /**

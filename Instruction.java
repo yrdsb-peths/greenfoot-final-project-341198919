@@ -60,7 +60,7 @@ public class Instruction extends World
         addObject(zero,435,250);
         
         //Begin game
-        Label startGame = new Label("Press space to begin",50);
+        Label startGame = new Label("Press space to continue",50);
         addObject(startGame,300,350);
         }
         
