@@ -16,6 +16,7 @@ public class MyWorld extends World
     
     private SimpleTimer enemyTimer = new SimpleTimer();
     private SimpleTimer sanicTimer = new SimpleTimer();
+    private SimpleTimer ghostTimer = new SimpleTimer();
 
     public AtkArea northAtk;
     public AtkArea eastAtk;
@@ -57,8 +58,10 @@ public class MyWorld extends World
         addObject(westAtk,230,300);
 
         //Spawing Enemies
+        spawnGhost();
         enemyTimer.mark();
         sanicTimer.mark();
+        ghostTimer.mark();
     }
 
     public void LifeCounter()
@@ -129,6 +132,31 @@ public class MyWorld extends World
             addObject(zoom,0,300);
         }
     }
+    
+    public void spawnGhost()
+    {
+        Boo ghost = new Boo();
+
+        int spawnArea = Greenfoot.getRandomNumber(4);
+
+        // consider: addObject(bob, 450 * spawnArea, 900 - spawnArea);
+        if(spawnArea == 1)
+        {
+            addObject(ghost,300,180);
+        }
+        if(spawnArea == 2)
+        {
+            addObject(ghost,180,300);
+        }
+        if(spawnArea == 3)
+        {
+            addObject(ghost,300,420);
+        }
+        if(spawnArea == 0)
+        {
+            addObject(ghost,420,300);
+        }
+    }
     //Act method, spawns the enemy in every few seconds
     public void act()
     {
@@ -141,6 +169,11 @@ public class MyWorld extends World
         {
             spawnSanic();
             sanicTimer.mark();
+        }
+        if (ghostTimer.millisElapsed() > 12000)
+        {
+            spawnGhost();
+            ghostTimer.mark();
         }
     }
 }
