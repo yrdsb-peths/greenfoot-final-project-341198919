@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class AtkArea extends Actor
 {
-    GreenfootImage arrowNorth = new GreenfootImage("images/arrow.png");
+    GreenfootImage arrowNorth = new GreenfootImage("images/Arrow.png");
     GreenfootImage arrowEast = new GreenfootImage("images/arrowEast.png");
     GreenfootImage arrowSouth = new GreenfootImage("images/arrowSouth.png");
     GreenfootImage arrowWest = new GreenfootImage("images/arrowWest.png");
